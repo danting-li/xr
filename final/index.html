@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 5000"></a-entity>
+
+      <a-entity id="sphere" geometry="primitive: cone"
+                material="color: #e695b8; shader: flat"
+                position="0 0.15 -5"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 0 -0.10 -4; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: sphere"
+                material="color: #ff72af; shader: flat"
+                position="8 0.15 -5"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 5 0.15 -8; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: triangle"
+                material="color: #dce620; shader: flat"
+                position="4 0.15 -5"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 5 0.15 -5; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: cylinder"
+                material="color: #ffe072; shader: flat"
+                position="-8 0.15 -5"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: -5 0.15 -5; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: octahedron"
+                material="color: #afff72; shader: flat"
+                position="-2 0.15 -5"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: -4 0.15 -3; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: ring"
+                material="color: #ff9a72; shader: flat"
+                position="0 0.15 -10"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 0 0.15 -7; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: tetrahedron"
+                material="color: #ff72f6; shader: flat"
+                position="4 0.15 3"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 1 0.15 1; loop: true"></a-entity>
+
+                <a-entity id="sphere" geometry="primitive: torus"
+                material="color: #ff7772; shader: flat"
+                position="0 0.15 5"
+                light="type: point; intensity: 5"
+                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 0 0.15 3; loop: true"></a-entity>
+
+      <a-entity id="ocean" ocean="density: 20; width: 50; depth: 50; speed: 4"
+                material="color: #60c2e0; opacity: 0.75; metalness: 0; roughness: 1"
+                rotation="-90 0 0"></a-entity>
+
+      <a-entity id="sky" geometry="primitive: sphere; radius: 5000"
+                material="shader: gradient; topColor: 235 235 245; bottomColor: 185 185 210"
+                scale="-1 1 1"></a-entity>
+
+                
+                
+                
+
+      <a-entity id="light" light="type: ambient; color: #888"></a-entity>
+
+
+
+
+
+
+      
+
+
+
+
+    </a-scene>
+
+
+<a-scene>
+
+    <a-assets>
+        <a-asset-item id="tree" src="models/heart_in_love/scene.gltf"></a-asset-item>
+      </a-assets>
+    
+      <!-- Using the asset management system. -->
+      <a-gltf-model src="#tree" scale="2.0 2.0 2.0" position="0 5 -10" ></a-gltf-model>
+    
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <a-gltf-model src="models/heart_in_love/scene.gltf" scale="2.0 2.0 2.0" position="0 5 -10" ></a-gltf-model>
+
+</a-scene>
+
+
+
+<a-scene>
+    <a-assets>
+      <a-asset-item id="crate-obj" src="models/heart-in-love/source/5.obj"></a-asset-item>
+      
+    </a-assets>
+  
+    <!-- Using the asset management system. -->
+    <a-obj-model src="#crate-obj" mtl="#crate-mtl"></a-obj-model>
+  
+    <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+    <a-obj-model src="models/heart-in-love/source/5.obj" mtl="crate.mtl"></a-obj-model>
+  </a-scene>
+
+
+    
+  </body>
+</html>
